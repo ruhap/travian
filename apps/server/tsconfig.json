@@ -1,9 +1,8 @@
 {
   "extends": "@travian/typescript-config/base.json",
   "compilerOptions": {
-    "lib": ["ES2015"],
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "outDir": "dist",
+    "rootDir": "src"
   },
   "exclude": ["node_modules"],
   "include": ["src", "eslint.config.js"]

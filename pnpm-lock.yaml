@@ -33,6 +33,9 @@ importers:
       '@travian/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@travian/server':
+        specifier: workspace:*
+        version: link:../server
       '@travian/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config

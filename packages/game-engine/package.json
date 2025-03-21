@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
-    "start": "",
+    "start": "node dist/game.js",
     "lint": "eslint \"src/**/*.ts*\" --max-warnings 0",
     "check-types": "tsc --noEmit"
   },

@@ -4,14 +4,14 @@
   "scripts": {
     "dev": "tsc src/index.ts --watch",
     "build": "tsc",
-    "start": "",
+    "start": "node dist/index.js",
     "lint": "eslint \"src/**/*.ts*\" --max-warnings 0",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
     "@travian/eslint-config": "workspace:*",
-    "@travian/typescript-config": "workspace:*",
     "@travian/game-engine": "workspace:*",
+    "@travian/typescript-config": "workspace:*",
     "@types/express": "^5.0.1",
     "@types/node": "^22.13.10",
     "eslint": "^9.22.0",

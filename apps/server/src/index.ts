@@ -8,10 +8,12 @@ const app = express();
 
 const game = new Game();
 
-console.log(game.example());
-
-app.get("/", (req, res) => {
+app.get("/hello", (req, res) => {
   res.send("Hello World!");
+});
+
+app.get("/game", (req, res) => {
+  res.send(game.example());
 });
 
 app.listen(port, () => {
