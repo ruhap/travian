@@ -7,7 +7,9 @@
     "dev": "tsup --watch --onSuccess \"node dist/index.js\"",
     "build": "tsup",
     "lint": "eslint \"src/**/*.ts*\" --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "devDependencies": {
     "@travian/eslint-config": "workspace:*",
@@ -20,7 +22,11 @@
     "typescript": "latest"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
+    "drizzle-kit": "^0.30.5",
+    "drizzle-orm": "^0.41.0",
     "express": "^4.21.2",
+    "postgres": "^3.4.5",
     "socket.io": "^4.8.1"
   }
 }

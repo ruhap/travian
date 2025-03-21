@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    container_name: travian-db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+
+volumes:
+  postgres:

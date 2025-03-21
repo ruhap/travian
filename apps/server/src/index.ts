@@ -2,14 +2,20 @@
 import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
-
 import { Game } from "@travian/game-engine";
+
+import "dotenv/config";
 
 const port = 3001;
 
 const app = express();
 const httpServer = createServer(app);
-const io = new Server(httpServer);
+
+const io = new Server(httpServer, {
+  cors: {
+    origin: "http://localhost:3000",
+  },
+});
 
 const game = new Game();
 

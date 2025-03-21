@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +14,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning className="min-h-screen">
+        <header className="container mx-auto flex gap-4 justify-center p-4 bg-slate-100">
+          <Link href="/resources">Resources</Link>
+          <Link href="/town">Town</Link>
+          <Link href="/map">Map</Link>
+        </header>
+        <div className="flex gap-2">
+          <div className="min-w-sm bg-gray-200">Sidebar left</div>
+          <div className="grow">{children}</div>
+          <div className="min-w-sm bg-gray-200">Sidebar right</div>
+        </div>
+      </body>
     </html>
   );
 }
