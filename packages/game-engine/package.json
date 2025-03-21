@@ -1,0 +1,17 @@
+{
+  "name": "@travian/game-engine",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc src/index.ts --watch",
+    "build": "tsc",
+    "start": "",
+    "lint": "",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@travian/eslint-config": "workspace:*",
+    "@travian/typescript-config": "workspace:*",
+    "eslint": "^9.22.0",
+    "typescript": "latest"
+  }
+}
