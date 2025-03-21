@@ -1,7 +1,5 @@
 export class Game {
-  constructor() {
-    console.log("Game is created");
-  }
+  constructor() {}
 
   example() {
     return "example";

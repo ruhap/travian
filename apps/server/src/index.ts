@@ -1,6 +1,6 @@
 import express from "express";
 
-import { Game } from "@travian/game-engine";
+import { Game } from "@travian/game-engine/game";
 
 const port = 3001;
 
