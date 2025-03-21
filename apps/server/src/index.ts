@@ -1,6 +1,6 @@
 import express from "express";
 
-import { Game } from "@travian/game-engine/game";
+import { Game } from "@travian/game-engine";
 
 const port = 3001;
 
@@ -9,11 +9,11 @@ const app = express();
 const game = new Game();
 
 app.get("/hello", (req, res) => {
-  res.send("Hello World!");
+  res.json({ message: "Hello, World!" });
 });
 
 app.get("/game", (req, res) => {
-  res.send(game.example());
+  res.json({ message: game.example() });
 });
 
 app.listen(port, () => {

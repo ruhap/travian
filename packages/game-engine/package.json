@@ -1,23 +1,24 @@
 {
   "name": "@travian/game-engine",
-  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
-    "start": "node dist/game.js",
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "start": "node dist/index.js",
     "lint": "eslint \"src/**/*.ts*\" --max-warnings 0",
     "check-types": "tsc --noEmit"
-  },
-  "exports": {
-    "./game": {
-      "types": "./src/game.ts",
-      "default": "./dist/game.js"
-    }
   },
   "devDependencies": {
     "@travian/eslint-config": "workspace:*",
     "@travian/typescript-config": "workspace:*",
     "eslint": "^9.22.0",
+    "tsup": "^8.4.0",
     "typescript": "latest"
   }
 }
