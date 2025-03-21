@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import Link from "next/link";
+import { RightSideBar } from "./right-side-bar";
+import { LeftSideBar } from "./left-side-bar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +23,9 @@ export default function RootLayout({
           <Link href="/map">Map</Link>
         </header>
         <div className="flex gap-2">
-          <div className="min-w-sm bg-gray-200">Sidebar left</div>
+          <LeftSideBar />
           <div className="grow">{children}</div>
-          <div className="min-w-sm bg-gray-200">Sidebar right</div>
+          <RightSideBar />
         </div>
       </body>
     </html>

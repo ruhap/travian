@@ -5,6 +5,7 @@ import { Server } from "socket.io";
 import { Game } from "@travian/game-engine";
 
 import "dotenv/config";
+import { db } from "./db";
 
 const port = 3001;
 
@@ -25,6 +26,15 @@ app.get("/hello", (req, res) => {
 
 app.get("/game", (req, res) => {
   res.json({ message: game.example() });
+});
+
+app.get("/villages", async (req, res) => {
+  const userId = "2";
+  const villages = await db.query.villages.findMany({
+    where: (village, { eq }) => eq(village.ownerId, userId),
+  });
+
+  res.json({ villages });
 });
 
 io.on("connection", (socket) => {
